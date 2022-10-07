@@ -15,5 +15,5 @@ public class Message {
 
     public static final String RESULT_HEAD_MESSAGE = "실행 결과";
     public static final String RESULT_CAR_INFO = "%s : %s\n";
-    public static final String RESULT_CAR_NAME = "최종 우승자: %s";
+    public static final String RESULT_CAR_NAME = "최종 우승자 : %s";
 }
