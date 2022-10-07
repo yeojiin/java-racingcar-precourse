@@ -13,6 +13,8 @@ public class RacingcarController {
         generateCars();
         generateRaceCount();
 
+        racingGame.play(raceCount.getRaceCount());
+
     }
 
     private void generateCars() {
