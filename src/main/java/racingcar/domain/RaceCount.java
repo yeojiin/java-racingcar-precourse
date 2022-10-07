@@ -17,7 +17,7 @@ public class RaceCount {
     private void validateRaceCount(String count) {
         isEmptyCount(count);
         int parseCount = isNumeric(count);
-        validateRaceCountRange(parseCount);
+//        validateRaceCountRange(parseCount);
     }
 
 
