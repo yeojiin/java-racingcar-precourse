@@ -23,7 +23,7 @@ public class RacingGame {
     }
 
     private void moveAllCars() {
-        for(Car car : cars.getPlayCars()) {
+        for(Car car : cars.getCarList()) {
             moveEachCar(car);
         }
     }
