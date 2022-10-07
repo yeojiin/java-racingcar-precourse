@@ -5,17 +5,18 @@ import racingcar.constant.Message;
 
 import java.util.ArrayList;
 import java.util.List;
+import static racingcar.constant.Constant.WINNER_CAR_NAME_DELIMITER;
 
 public class Cars {
-    private final List<Car> playCars;
+    private final List<Car> carList;
 
 
     public Cars (List<Car> participatingCars) {
-        this.playCars = participatingCars;
+        this.carList = participatingCars;
     }
 
-    public List<Car> getPlayCars() {
-        return playCars;
+    public List<Car> getCarList() {
+        return carList;
     }
 
 
@@ -42,7 +43,7 @@ public class Cars {
 
     public int getWinnerScore() {
         int score = 0;
-        for(Car car: playCars) {
+        for(Car car: carList) {
             score = score < car.getPosition() ? car.getPosition() : score;
 
         }
@@ -51,11 +52,19 @@ public class Cars {
 
     public Cars getWinnerCars(int winnerScore) {
         List<Car> winnerCars = new ArrayList<>();
-        for(Car car : playCars) {
+        for(Car car : carList) {
             if(winnerScore == car.getPosition()) {
                 winnerCars.add(car);
             }
         }
         return new Cars(winnerCars);
+    }
+
+    public static String getWinnerCarName(Cars winner) {
+        List<String> winnerCarNames = new ArrayList<>();
+        for(Car car : winner.getCarList()) {
+            winnerCarNames.add(car.getCarName());
+        }
+        return String.join(WINNER_CAR_NAME_DELIMITER, winnerCarNames);
     }
 }

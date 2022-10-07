@@ -8,6 +8,7 @@ import racingcar.domain.RacingGame;
 import static racingcar.constant.Message.RESULT_HEAD_MESSAGE;
 import static racingcar.constant.Message.RESULT_CAR_INFO;
 import static racingcar.constant.Constant.BAR;
+import static racingcar.constant.Message.RESULT_CAR_NAME;
 
 public class OutputView {
     public static void printMessage(String message) {
@@ -32,7 +33,7 @@ public class OutputView {
     }
 
     private static void printEachGameProcess(Cars process) {
-        for(Car car : process.getPlayCars()) {
+        for(Car car : process.getCarList()) {
             System.out.printf(RESULT_CAR_INFO, car.getCarName(), addBarWithCarPosition(car.getPosition()));
 
         }
@@ -49,9 +50,8 @@ public class OutputView {
     }
 
     private static void printWinner(Cars winner) {
-        for(Car car : winner.getPlayCars()) {
-
-        }
+        String winnerCarNames = Cars.getWinnerCarName(winner);
+        System.out.printf(RESULT_CAR_NAME, winnerCarNames);
     }
 
 
