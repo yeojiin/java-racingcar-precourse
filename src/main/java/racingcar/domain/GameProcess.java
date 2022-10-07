@@ -8,4 +8,8 @@ public class GameProcess {
     public GameProcess(List<Cars> cars) {
         this.processes = cars;
     }
+
+    public void saveProcess(Cars carsResult) {
+        processes.add(carsResult);
+    }
 }

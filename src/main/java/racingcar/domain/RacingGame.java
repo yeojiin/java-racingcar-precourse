@@ -17,7 +17,7 @@ public class RacingGame {
     public void play(int count) {
         while(count > 0) {
             moveAllCars();
-            saveGameProcess();
+            saveGameProcess(cars);
             count--;
         }
     }
@@ -32,6 +32,7 @@ public class RacingGame {
         car.move(Common.getRandomNumber(MIN_RACE_COUNT, MAX_RACE_COUNT));
     }
 
-    private void saveGameProcess() {
+    private void saveGameProcess(Cars cars) {
+        gameProcess.saveProcess(cars);
     }
 }
