@@ -48,5 +48,9 @@ public class RacingGame {
         return winnerCars;
     }
 
+    public Cars getCars() {
+        return cars;
+    }
+
 
 }
