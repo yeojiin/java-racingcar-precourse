@@ -41,7 +41,12 @@ public class RacingGame {
     }
 
 
-//    public String getWinner() {
-//
-//    }
+    public Cars getWinner() {
+        int winnerScore = cars.getWinnerScore();
+        Cars winnerCars = cars.getWinnerCars(winnerScore);
+
+        return winnerCars;
+    }
+
+
 }

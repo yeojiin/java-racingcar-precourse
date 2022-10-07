@@ -21,7 +21,8 @@ public class OutputView {
         printMessage(RESULT_HEAD_MESSAGE);
         printGameProcesses(racingGame.getGameProcesses());
         printWinner(racingGame.getWinner());
-//    }
+    }
+
 
     private static void printGameProcesses(GameProcess gameProcess) {
         for(Cars process : gameProcess.getProcesses()) {
@@ -46,6 +47,13 @@ public class OutputView {
         }
         return stringBuilder.toString();
     }
+
+    private static void printWinner(Cars winner) {
+        for(Car car : winner.getPlayCars()) {
+
+        }
+    }
+
 
 
 }
