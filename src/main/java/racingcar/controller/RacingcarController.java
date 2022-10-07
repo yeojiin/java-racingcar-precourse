@@ -14,7 +14,7 @@ public class RacingcarController {
         generateRaceCount();
 
         racingGame.play(raceCount.getRaceCount());
-
+        OutputView.printResult(racingGame);
     }
 
     private void generateCars() {

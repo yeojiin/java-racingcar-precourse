@@ -35,4 +35,13 @@ public class RacingGame {
     private void saveGameProcess(Cars cars) {
         gameProcess.saveProcess(cars);
     }
+
+    public GameProcess getGameProcesses() {
+        return gameProcess;
+    }
+
+
+//    public String getWinner() {
+//
+//    }
 }

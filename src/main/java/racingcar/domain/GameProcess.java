@@ -12,4 +12,8 @@ public class GameProcess {
     public void saveProcess(Cars carsResult) {
         processes.add(carsResult);
     }
+
+    public List<Cars> getProcesses() {
+        return processes;
+    }
 }
