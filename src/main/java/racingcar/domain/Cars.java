@@ -13,6 +13,10 @@ public class Cars {
         this.playCars = participatingCars;
     }
 
+    public List<Car> getPlayCars() {
+        return playCars;
+    }
+
 
     public static Cars createParticipatingCars(String carNames) {
         validateCarNames(carNames);
@@ -21,7 +25,6 @@ public class Cars {
     }
 
     private static void validateCarNames(String carNames) {
-        // 분리
         if(carNames == null || carNames == "") {
             throw new IllegalArgumentException(Message.NOT_VALID_NULL);
         }
