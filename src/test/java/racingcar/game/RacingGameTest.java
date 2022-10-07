@@ -20,12 +20,12 @@ class RacingGameTest {
 
     @BeforeEach
     void setUp() {
-        racingGame = new RacingGame("one,two");
+        racingGame = new RacingGame("one,two,three");
     }
 
     @ParameterizedTest
     @DisplayName("우승자 선정 테스트")
-    @CsvSource(value = {"3,4:two"}, delimiter = ':')
+    @CsvSource(value = {"3,4,1:two", "20,4,3:one, two", "0,3,4:three"}, delimiter = ':')
     void validateWinnerNamesTest(String input, String expected) {
         // given
         String[] splitCarNumber = input.split(COLON)[0].split(SEPERATOR);

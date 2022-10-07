@@ -11,7 +11,7 @@ public class Message {
     public static final String NOT_VALID_NULL = ERROR_PREFIX + " 빈 값은 입력할 수 없습니다.";
     public static final String ERROR_CAR_NAME_LENGTH = ERROR_PREFIX + " 1 ~ 5자의 이름을 입력해야 합니다.";
     public static final String ERROR_PARSE_INT = ERROR_PREFIX + " 숫자만 입력 가능합니다.";
-    public static final String ERROR_RACE_COUNT_RAGE = ERROR_PREFIX + " " + MIN_RACE_COUNT + "~" + MAX_RACE_COUNT + " 사이 숫자만 입력 가능합니다.";
+    public static final String ERROR_RACE_COUNT_RAGE = ERROR_PREFIX + "시도 횟수는 0 이상 입력 가능합니다.";
 
     public static final String RESULT_HEAD_MESSAGE = "실행 결과";
     public static final String RESULT_CAR_INFO = "%s : %s\n";

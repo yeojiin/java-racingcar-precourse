@@ -12,5 +12,6 @@ public class Constant {
     public static final int MIN_RACE_COUNT = 0;
     public static final int MAX_RACE_COUNT = 9;
     public static final int MOVE_CONDITION = 3;
+    public static final int MIN_TRY_COUNT = 0;
 
 }

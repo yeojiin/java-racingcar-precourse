@@ -25,4 +25,13 @@ public class RaceCountTest {
         );
     }
 
+    @Test
+    @DisplayName("시도 횟수 0 예외 테스트")
+    void validateZeroRaceCountTest() {
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> new RaceCount("0")
+        );
+    }
+
 }

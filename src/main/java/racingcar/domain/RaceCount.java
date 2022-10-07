@@ -1,15 +1,10 @@
 package racingcar.domain;
 
 
-import racingcar.constant.Message;
-
 import java.util.regex.Pattern;
 
-import static racingcar.constant.Constant.MAX_RACE_COUNT;
-import static racingcar.constant.Constant.MIN_RACE_COUNT;
-import static racingcar.constant.Message.NOT_VALID_NULL;
-import static racingcar.constant.Message.ERROR_PARSE_INT;
-import static racingcar.constant.Message.ERROR_RACE_COUNT_RAGE;
+import static racingcar.constant.Constant.MIN_TRY_COUNT;
+import static racingcar.constant.Message.*;
 
 public class RaceCount {
     private static Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
@@ -23,7 +18,7 @@ public class RaceCount {
     private void validateRaceCount(String count) {
         isEmptyCount(count);
         int parseCount = isNumeric(count);
-//        validateRaceCountRange(parseCount);
+        validateRaceCountRange(parseCount);
     }
 
 
@@ -41,7 +36,7 @@ public class RaceCount {
     }
 
     private void validateRaceCountRange(int parseCount) {
-        if(parseCount < MIN_RACE_COUNT || parseCount > MAX_RACE_COUNT) {
+        if(parseCount <= MIN_TRY_COUNT) {
             throw new IllegalArgumentException(ERROR_RACE_COUNT_RAGE);
         }
     }
