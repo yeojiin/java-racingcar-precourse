@@ -50,8 +50,7 @@ public class OutputView {
     }
 
     private static void printWinner(Cars winner) {
-        String winnerCarNames = Cars.getWinnerCarName(winner);
-        System.out.printf(RESULT_CAR_NAME, winnerCarNames);
+        System.out.printf(RESULT_CAR_NAME, Cars.getWinnerCarName(winner));
     }
 
 
