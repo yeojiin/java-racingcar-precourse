@@ -3,7 +3,6 @@ package racingcar.game;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import racingcar.constant.Constant;
 import racingcar.domain.Cars;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,6 +14,6 @@ public class CarsTest {
     @CsvSource(value = {"lim=1", "bba,shong=2", "lim,bba,shong=3"}, delimiter = '=')
     void validateCreateParticipatingCarsTest(String testValue, String count) {
         Cars cars = Cars.createParticipatingCars(testValue.split(EQUAL)[0]);
-        assertEquals(cars.getPlayCars().size(), Integer.parseInt(count));
+        assertEquals(cars.getCarList().size(), Integer.parseInt(count));
     }
 }
