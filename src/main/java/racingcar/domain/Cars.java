@@ -9,6 +9,7 @@ import java.util.List;
 public class Cars {
     private final List<Car> playCars;
 
+
     public Cars (List<Car> participatingCars) {
         this.playCars = participatingCars;
     }
@@ -25,7 +26,7 @@ public class Cars {
     }
 
     private static void validateCarNames(String carNames) {
-        if(carNames == null || carNames == "") {
+        if(Common.isEmpty(carNames)) {
             throw new IllegalArgumentException(Message.NOT_VALID_NULL);
         }
     }

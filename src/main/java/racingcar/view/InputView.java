@@ -11,5 +11,8 @@ public class InputView {
         return Console.readLine();
     }
 
-
+    public static String getPlayCount() {
+        System.out.println(Message.RACE_COUNT_INPUT_MESSAGE);
+        return Console.readLine();
+    }
 }
