@@ -1,17 +1,17 @@
 package racingcar.controller;
 
-import racingcar.domain.PlayCount;
+import racingcar.domain.RaceCount;
 import racingcar.domain.RacingGame;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
 public class RacingcarController {
     private RacingGame racingGame;
-    private PlayCount playCount;
+    private RaceCount raceCount;
 
     public void ready() {
         generateCars();
-        setPalyCount();
+        generateRaceCount();
 
     }
 
@@ -26,10 +26,10 @@ public class RacingcarController {
         }
     }
 
-    private void setPalyCount() {
+    private void generateRaceCount() {
         while(true) {
             try {
-                playCount = new PlayCount(InputView.getPlayCount());
+                raceCount = new RaceCount(InputView.getPlayCount());
                 break;
             } catch (IllegalArgumentException illegalArgumentException) {
                 OutputView.printMessage(illegalArgumentException.getMessage());
