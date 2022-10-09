@@ -9,13 +9,14 @@ public class RacingGame {
     private final Cars cars;
     private final GameProcess gameProcess;
 
+
     public RacingGame(String carNames) {
         this.cars = Cars.createParticipatingCars(carNames);
         this.gameProcess = new GameProcess(new ArrayList<>());
     }
 
     public void play(int count) {
-        while(count > 0) {
+        while (count > 0) {
             moveAllCars();
             saveGameProcess(cars);
             count--;
@@ -23,7 +24,7 @@ public class RacingGame {
     }
 
     private void moveAllCars() {
-        for(Car car : cars.getCarList()) {
+        for (Car car : cars.getCarList()) {
             moveEachCar(car);
         }
     }
@@ -43,7 +44,7 @@ public class RacingGame {
 
     public Cars getWinner() {
         int winnerScore = cars.getWinnerScore();
-        Cars winnerCars = cars.getWinnerCars(winnerScore);
+        Cars winnerCars = cars.setWinnerCars(winnerScore);
 
         return winnerCars;
     }

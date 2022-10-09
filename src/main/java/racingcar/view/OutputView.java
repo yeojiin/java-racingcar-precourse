@@ -14,6 +14,7 @@ public class OutputView {
     public static void printMessage(String message) {
         System.out.println(message);
     }
+
     public static void EnterMessage() {
         System.out.println();
     }
@@ -26,23 +27,22 @@ public class OutputView {
 
 
     private static void printGameProcesses(GameProcess gameProcess) {
-        for(Cars process : gameProcess.getProcesses()) {
+        for (Cars process : gameProcess.getProcesses()) {
             printEachGameProcess(process);
             EnterMessage();
         }
     }
 
     private static void printEachGameProcess(Cars process) {
-        for(Car car : process.getCarList()) {
+        for (Car car : process.getCarList()) {
             System.out.printf(RESULT_CAR_INFO, car.getCarName(), addBarWithCarPosition(car.getPosition()));
-
         }
 
     }
 
     private static String addBarWithCarPosition(int position) {
         StringBuilder stringBuilder = new StringBuilder();
-        while(position > 0) {
+        while (position > 0) {
             stringBuilder.append(BAR);
             position--;
         }
@@ -52,7 +52,6 @@ public class OutputView {
     private static void printWinner(Cars winner) {
         System.out.printf(RESULT_CAR_NAME, Cars.getWinnerCarName(winner));
     }
-
 
 
 }

@@ -9,14 +9,23 @@ import static racingcar.constant.Constant.WINNER_CAR_NAME_DELIMITER;
 
 public class Cars {
     private final List<Car> carList;
+    private final List<Car> winnerCars;
 
 
     public Cars (List<Car> participatingCars) {
         this.carList = participatingCars;
+        this.winnerCars = new ArrayList<>();
+    }
+    public Cars (List<Car> carList, List<Car> winnerCars) {
+        this.carList = carList;
+        this.winnerCars = winnerCars;
     }
 
     public List<Car> getCarList() {
         return carList;
+    }
+    public List<Car> getWinnerCarList() {
+        return winnerCars;
     }
 
 
@@ -50,19 +59,18 @@ public class Cars {
         return score;
     }
 
-    public Cars getWinnerCars(int winnerScore) {
-        List<Car> winnerCars = new ArrayList<>();
+    public Cars setWinnerCars(int winnerScore) {
         for(Car car : carList) {
             if(winnerScore == car.getPosition()) {
                 winnerCars.add(car);
             }
         }
-        return new Cars(winnerCars);
+        return new Cars(carList, winnerCars);
     }
 
     public static String getWinnerCarName(Cars winner) {
         List<String> winnerCarNames = new ArrayList<>();
-        for(Car car : winner.getCarList()) {
+        for(Car car : winner.getWinnerCarList()) {
             winnerCarNames.add(car.getCarName());
         }
         return String.join(WINNER_CAR_NAME_DELIMITER, winnerCarNames);
