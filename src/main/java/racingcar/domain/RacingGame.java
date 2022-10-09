@@ -45,7 +45,6 @@ public class RacingGame {
     public Cars getWinner() {
         int winnerScore = cars.getWinnerScore();
         Cars winnerCars = cars.setWinnerCars(winnerScore);
-
         return winnerCars;
     }
 

@@ -57,7 +57,6 @@ public class Cars {
         int score = 0;
         for (Car car : carList) {
             score = score < car.getPosition() ? car.getPosition() : score;
-
         }
         return score;
     }
