@@ -4,16 +4,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import racingcar.constant.Constant;
 import racingcar.domain.Car;
 import racingcar.domain.Cars;
 import racingcar.domain.RacingGame;
-import static racingcar.constant.Constant.COLON;
-import static racingcar.constant.Constant.SEPERATOR;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static racingcar.constant.Constant.COLON;
+import static racingcar.constant.Constant.SEPERATOR;
 
 class RacingGameTest {
     private RacingGame racingGame;
