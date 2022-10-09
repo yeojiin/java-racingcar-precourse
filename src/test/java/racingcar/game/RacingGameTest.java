@@ -25,20 +25,17 @@ class RacingGameTest {
 
     @ParameterizedTest
     @DisplayName("우승자 선정 테스트")
-    @CsvSource(value = {"3,4,1:two", "20,4,3:one, two", "0,3,4:three"}, delimiter = ':')
+    @CsvSource(value = {"3,4,1:two", "8,4,3:one, two", "0,3,4:three"}, delimiter = ':')
     void validateWinnerNamesTest(String input, String expected) {
-        // given
         String[] splitCarNumber = input.split(COLON)[0].split(SEPERATOR);
         List<Car> resultCar = racingGame.getCars().getCarList();
 
-        // when
         for (int i = 0; i < splitCarNumber.length; i++) {
             Car car = resultCar.get(i % resultCar.size());
             car.move(Integer.parseInt(splitCarNumber[i]));
         }
         String result = Cars.getWinnerCarName(racingGame.getWinner());
 
-        // then
         assertEquals(expected, result);
     }
 }
