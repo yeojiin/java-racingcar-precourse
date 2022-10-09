@@ -29,14 +29,14 @@ public class RaceCount {
     }
 
     private int isNumeric(String strNum) {
-        if(!pattern.matcher(strNum).matches()) {
+        if (!pattern.matcher(strNum).matches()) {
             throw new IllegalArgumentException(ERROR_PARSE_INT);
         }
         return Integer.parseInt(strNum);
     }
 
     private void validateRaceCountRange(int parseCount) {
-        if(parseCount <= MIN_TRY_COUNT) {
+        if (parseCount <= MIN_TRY_COUNT) {
             throw new IllegalArgumentException(ERROR_RACE_COUNT_RAGE);
         }
     }

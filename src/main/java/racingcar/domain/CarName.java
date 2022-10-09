@@ -12,7 +12,7 @@ public class CarName {
     }
 
     private void validateCarName(String carName) {
-        if(carName.length() < Constant.CAR_NAME_MIN_LENGTH || carName.length() > Constant.CAR_NAME_MAX_LENGTH) {
+        if (carName.length() < Constant.CAR_NAME_MIN_LENGTH || carName.length() > Constant.CAR_NAME_MAX_LENGTH) {
             throw new IllegalArgumentException(Message.ERROR_CAR_NAME_LENGTH);
         }
     }

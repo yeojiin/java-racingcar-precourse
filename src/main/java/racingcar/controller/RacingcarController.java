@@ -18,7 +18,7 @@ public class RacingcarController {
     }
 
     private void generateCars() {
-        while(true) {
+        while (true) {
             try {
                 racingGame = new RacingGame(InputView.getParticipatingCarNames());
                 break;
@@ -29,7 +29,7 @@ public class RacingcarController {
     }
 
     private void generateRaceCount() {
-        while(true) {
+        while (true) {
             try {
                 raceCount = new RaceCount(InputView.getPlayCount());
                 break;

@@ -13,7 +13,7 @@ public class Car {
     }
 
     public void move(int randomNumber) {
-        if(Common.overMoveCondition(randomNumber)) {
+        if (Common.overMoveCondition(randomNumber)) {
             movePosition();
         }
     }
